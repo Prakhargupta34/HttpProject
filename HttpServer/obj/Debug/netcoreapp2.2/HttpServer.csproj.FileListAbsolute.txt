@@ -1,0 +1,11 @@
+C:\Users\pgupta\source\repos\HttpProject\HttpServer\bin\Debug\netcoreapp2.2\HttpServer.deps.json
+C:\Users\pgupta\source\repos\HttpProject\HttpServer\bin\Debug\netcoreapp2.2\HttpServer.runtimeconfig.json
+C:\Users\pgupta\source\repos\HttpProject\HttpServer\bin\Debug\netcoreapp2.2\HttpServer.runtimeconfig.dev.json
+C:\Users\pgupta\source\repos\HttpProject\HttpServer\bin\Debug\netcoreapp2.2\HttpServer.dll
+C:\Users\pgupta\source\repos\HttpProject\HttpServer\bin\Debug\netcoreapp2.2\HttpServer.pdb
+C:\Users\pgupta\source\repos\HttpProject\HttpServer\obj\Debug\netcoreapp2.2\HttpServer.csproj.CoreCompileInputs.cache
+C:\Users\pgupta\source\repos\HttpProject\HttpServer\obj\Debug\netcoreapp2.2\HttpServer.AssemblyInfoInputs.cache
+C:\Users\pgupta\source\repos\HttpProject\HttpServer\obj\Debug\netcoreapp2.2\HttpServer.AssemblyInfo.cs
+C:\Users\pgupta\source\repos\HttpProject\HttpServer\obj\Debug\netcoreapp2.2\HttpServer.dll
+C:\Users\pgupta\source\repos\HttpProject\HttpServer\obj\Debug\netcoreapp2.2\HttpServer.pdb
+C:\Users\pgupta\source\repos\HttpProject\HttpServer\obj\Debug\netcoreapp2.2\HttpServer.csprojResolveAssemblyReference.cache

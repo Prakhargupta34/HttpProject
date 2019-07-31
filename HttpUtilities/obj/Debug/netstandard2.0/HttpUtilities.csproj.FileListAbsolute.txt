@@ -1,0 +1,9 @@
+C:\Users\pgupta\source\repos\HttpProject\HttpUtilities\bin\Debug\netstandard2.0\HttpUtilities.deps.json
+C:\Users\pgupta\source\repos\HttpProject\HttpUtilities\bin\Debug\netstandard2.0\HttpUtilities.dll
+C:\Users\pgupta\source\repos\HttpProject\HttpUtilities\bin\Debug\netstandard2.0\HttpUtilities.pdb
+C:\Users\pgupta\source\repos\HttpProject\HttpUtilities\obj\Debug\netstandard2.0\HttpUtilities.csprojResolveAssemblyReference.cache
+C:\Users\pgupta\source\repos\HttpProject\HttpUtilities\obj\Debug\netstandard2.0\HttpUtilities.csproj.CoreCompileInputs.cache
+C:\Users\pgupta\source\repos\HttpProject\HttpUtilities\obj\Debug\netstandard2.0\HttpUtilities.AssemblyInfoInputs.cache
+C:\Users\pgupta\source\repos\HttpProject\HttpUtilities\obj\Debug\netstandard2.0\HttpUtilities.AssemblyInfo.cs
+C:\Users\pgupta\source\repos\HttpProject\HttpUtilities\obj\Debug\netstandard2.0\HttpUtilities.dll
+C:\Users\pgupta\source\repos\HttpProject\HttpUtilities\obj\Debug\netstandard2.0\HttpUtilities.pdb
