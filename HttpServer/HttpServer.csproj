@@ -6,4 +6,8 @@
     <RootNamespace>HttpServer</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HttpUtilities\HttpUtilities.csproj" />
+  </ItemGroup>
+
 </Project>

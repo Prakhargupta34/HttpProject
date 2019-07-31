@@ -207,6 +207,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "HttpUtilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/HttpUtilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HttpUtilities.dll": {}
+        }
       }
     }
   },
@@ -678,10 +688,16 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "HttpUtilities/1.0.0": {
+      "type": "project",
+      "path": "../HttpUtilities/HttpUtilities.csproj",
+      "msbuildProject": "../HttpUtilities/HttpUtilities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "HttpUtilities >= 1.0.0",
       "Microsoft.NETCore.App >= 2.2.0"
     ]
   },
@@ -717,7 +733,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\pgupta\\source\\repos\\HttpProject\\HttpUtilities\\HttpUtilities.csproj": {
+              "projectPath": "C:\\Users\\pgupta\\source\\repos\\HttpProject\\HttpUtilities\\HttpUtilities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

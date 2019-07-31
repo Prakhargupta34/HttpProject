@@ -8,4 +8,6 @@ C:\Users\pgupta\source\repos\HttpProject\HttpServer\obj\Debug\netcoreapp2.2\Http
 C:\Users\pgupta\source\repos\HttpProject\HttpServer\obj\Debug\netcoreapp2.2\HttpServer.AssemblyInfo.cs
 C:\Users\pgupta\source\repos\HttpProject\HttpServer\obj\Debug\netcoreapp2.2\HttpServer.dll
 C:\Users\pgupta\source\repos\HttpProject\HttpServer\obj\Debug\netcoreapp2.2\HttpServer.pdb
+C:\Users\pgupta\source\repos\HttpProject\HttpServer\bin\Debug\netcoreapp2.2\HttpUtilities.dll
+C:\Users\pgupta\source\repos\HttpProject\HttpServer\bin\Debug\netcoreapp2.2\HttpUtilities.pdb
 C:\Users\pgupta\source\repos\HttpProject\HttpServer\obj\Debug\netcoreapp2.2\HttpServer.csprojResolveAssemblyReference.cache
