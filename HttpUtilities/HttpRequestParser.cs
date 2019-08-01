@@ -20,6 +20,7 @@ namespace HttpUtilities
 
         public static bool TryParse(string requestMessage, out HttpRequestParser httpRequest)
         {
+            requestMessage = requestMessage.Replace("\r", "");
             httpRequest = new HttpRequestParser();
             try
             {

@@ -1,11 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace HttpUtilities
 {
     public class HttpResponse
     {
+        public static string PATH = "D:/Root";
+
+        public static int RESPONEMESSAGESIZE = 1024 * 1000;
+
+        public static int REQUESTMESSAGESIZE = 1024;
+
         public static Dictionary<string,string> ExtensionContentTypeMapper = new Dictionary<string, string>(){{ ".323", "text/h323" },
                 {".3g2", "video/3gpp2"},
                 {".3gp", "video/3gpp"},
@@ -678,6 +685,77 @@ namespace HttpUtilities
         public byte[] Body { get; set; }
 
         public Dictionary<string, string> ResponseHeaders = new Dictionary<string, string>();
+
+        public static HttpResponse GetHttpResponse(HttpRequestParser httpRequest)
+        {
+            HttpResponse httpResponse = new HttpResponse();
+            if (httpRequest.RequestURI == "/")
+            {
+                httpResponse.Body = File.ReadAllBytes(PATH + "/index.html");
+                httpResponse.StatusCode = "200";
+                httpResponse.ReasonPhrase = "OK";
+            }
+            else
+            {
+                try
+                {
+                    httpResponse.Body = File.ReadAllBytes(PATH + httpRequest.RequestURI);
+                    httpResponse.StatusCode = "200";
+                    httpResponse.ReasonPhrase = "OK";
+                }
+                catch
+                {
+                    httpResponse.Body = File.ReadAllBytes(PATH + "/error.html");
+                    httpResponse.StatusCode = "404";
+                    httpResponse.ReasonPhrase = "Not Found";
+                }
+
+            }
+            if (httpResponse.StatusCode != "404")
+            {
+                if (httpRequest.RequestURI.Contains("."))
+                {
+                    string extension = "." + httpRequest.RequestURI.Split('.')[1];
+                    if (HttpResponse.ExtensionContentTypeMapper.ContainsKey(extension))
+                    {
+                        httpResponse.ResponseHeaders["Content-Type"] = HttpResponse.ExtensionContentTypeMapper[extension];
+                    }
+                }
+            }
+            httpResponse.HTTPversion = httpRequest.HTTPversion;
+
+            if (httpResponse.Body.Length != 0)
+                httpResponse.ResponseHeaders["Content-Length"] = httpResponse.Body.Length.ToString();
+
+            return httpResponse;
+
+        }
+
+        public static byte[] ConvertHttpResponsToByte(HttpResponse httpResponse)
+        {
+            Byte[] response = new Byte[RESPONEMESSAGESIZE];
+            string header = String.Empty;
+            header += httpResponse.HTTPversion + " ";
+            header += httpResponse.StatusCode + " ";
+            header += httpResponse.ReasonPhrase + " ";
+
+            foreach (var responseHeaderName in httpResponse.ResponseHeaders.Keys)
+                header += "\n" + responseHeaderName + ":" + httpResponse.ResponseHeaders[responseHeaderName];
+
+            header = header.Replace("\r", "");
+            header += "\n\n";
+
+            List<byte> responseList = new List<byte>();
+
+            responseList.AddRange(Encoding.ASCII.GetBytes(header));
+            responseList.AddRange(httpResponse.Body);
+
+            //Byte[] response = responseList.ToArray();
+
+            response = responseList.ToArray();
+
+            return response;
+        }
 
     }
 }
